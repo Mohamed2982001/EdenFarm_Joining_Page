@@ -1,5 +1,6 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="ar" dir="rtl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +10,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary-color: #2E7D32; /* Green for Farm/Food vibe */
+            --primary-color: #2E7D32;
+            /* Green for Farm/Food vibe */
             --primary-hover: #1B5E20;
             --bg-color: #F5F7FA;
             --card-bg: #FFFFFF;
@@ -51,17 +53,11 @@
             transform: translateY(-5px);
         }
 
-        .logo-placeholder {
-            width: 80px;
-            height: 80px;
-            background-color: var(--accent-color);
-            border-radius: 50%;
+        .logo-img {
+            width: 100px;
+            height: auto;
             margin: 0 auto 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 32px;
-            color: var(--primary-color);
+            display: block;
         }
 
         h1 {
@@ -125,7 +121,7 @@
             margin-bottom: 15px;
             border: none;
             cursor: pointer;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
             position: relative;
             overflow: hidden;
         }
@@ -173,23 +169,28 @@
 
         /* Animation */
         @keyframes fadeUp {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         .container {
             animation: fadeUp 0.6s ease-out;
         }
-
     </style>
 </head>
+
 <body>
 
     <div class="container">
         <!-- Optional: Replace with actual Logo Image if available -->
-        <div class="logo-placeholder">
-            🌱
-        </div>
+        <img src="logo.png" alt="Eden Farm Logo" class="logo-img">
 
         <h1>تجربة تطبيق إيدن فارم</h1>
         <p>مرحباً بك في برنامج تجربة النسخة الأولية. <br> اتبع الخطوات التالية عشان تقدر تحمل التطبيق وتجربه.</p>
@@ -205,11 +206,13 @@
             </div>
         </div>
 
-        <a href="https://groups.google.com/g/edenfarm123" target="_blank" class="btn btn-primary" onclick="enableDownload()">
+        <a href="https://groups.google.com/g/edenfarm123" target="_blank" class="btn btn-primary"
+            onclick="enableDownload()">
             <span>انضمام للمجموعة (Join Group)</span>
         </a>
 
-        <a href="https://play.google.com/store/apps/details?id=com.edenfarm.app" target="_blank" class="btn btn-secondary" id="downloadBtn">
+        <a href="https://play.google.com/store/apps/details?id=com.edenfarm.app" target="_blank"
+            class="btn btn-secondary" id="downloadBtn">
             <span>تحميل التطبيق (Google Play)</span>
         </a>
 
@@ -222,19 +225,19 @@
         // Optional: simple logic to encourage clicking step 1 first
         // But for better UX, we leave both active. 
         // We could emphasize step 1.
-        
+
         console.log("Welcome to Eden Farm Testing Page");
 
         function enableDownload() {
-           // Maybe add a subtle animation or focus to the second button after clicking the first
-           const btn = document.getElementById('downloadBtn');
-           btn.style.borderColor = '#FFC107'; // Highlights the next step
-           
-           setTimeout(() => {
+            // Maybe add a subtle animation or focus to the second button after clicking the first
+            const btn = document.getElementById('downloadBtn');
+            btn.style.borderColor = '#FFC107'; // Highlights the next step
+
+            setTimeout(() => {
                 btn.style.borderColor = '#2E7D32';
-           }, 2000);
+            }, 2000);
         }
     </script>
 </body>
-</html>
 
+</html>
